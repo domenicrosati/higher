@@ -88,7 +88,7 @@ def _patched_parameters(
     return iter(self._fast_params[time])
 
 
-class _MonkeyPatchBase(_abc.ABC, _torch.nn.Module):
+class _MonkeyPatchBase(_abc.ABC):
     @_abc.abstractmethod
     def __init__(self) -> None:
         self._param_mapping: _typing.List[int] = []
